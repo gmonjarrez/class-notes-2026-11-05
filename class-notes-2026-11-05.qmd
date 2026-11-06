@@ -1,0 +1,188 @@
+---
+title: "Class Notes"
+author: "Georgia Monjarrez"
+date: "2026-11-05"
+format:
+  html:
+    title-block-style: none
+    toc: true
+    toc-title: "On this page"
+    toc-depth: 2
+    toc-location: right
+    embed-resources: true
+    theme: cosmo
+    output-file: index.html
+    include-in-header:
+      text: |
+        <style>
+        body { color: #29313a; line-height: 1.65; }
+        h1,h2,h3 { color: #242b32; }
+        .notes-meta { color: #65717b; margin-top: 1.5rem; }
+        h2 { margin-top: 2.2rem; }
+        li { margin-bottom: .45rem; }
+        </style>
+---
+
+::: {.notes-meta}
+Georgia Monjarrez · November 5, 2026
+:::
+
+# Class Notes {.unnumbered .unlisted}
+
+## Data Preparation and Analysis Strategy
+
+Data preparation comes before running the analysis. The main idea is to make sure the responses are usable, coded consistently, and checked for problems. The analysis plan also helps guide how the data should be prepared.
+
+The process goes in this order:
+
+1. Prepare a preliminary analysis plan.
+2. Check the questionnaires.
+3. Edit unsatisfactory responses.
+4. Code the answers.
+5. Transcribe or transfer the data.
+6. Clean the data.
+7. Make statistical adjustments when needed.
+8. Select the data analysis strategy.
+
+## Questionnaire Checking and Editing
+
+### Checking questionnaires
+
+A returned questionnaire is not automatically ready to use. Some reasons it may be unacceptable are:
+
+- Incomplete sections or missing pages.
+- Responses suggesting the instructions were misunderstood.
+- Very little variation in answers.
+- Submission after the established cutoff.
+- A respondent who does not qualify for the study.
+
+Checking is about identifying these problems before they affect the results.
+
+### Editing unsatisfactory responses
+
+The slides give three main options:
+
+- **Return to the field:** recontact the respondent to clarify the response when possible.
+- **Assign missing values:** mark an unusable answer as missing if clarification is not feasible.
+- **Discard the respondent:** remove a questionnaire that cannot be used satisfactorily.
+
+The approach depends on the problem. Editing should follow a consistent rule rather than changing answers to fit an expected result.
+
+## Coding Responses and the Codebook
+
+### Structured questions
+
+Coding means assigning a code, usually a number, to an answer. Structured questions are easier to code because the possible answers are already defined.
+
+- Use consistent codes for missing responses.
+- Keep the same variables in the same columns for each respondent.
+- When a question allows multiple selections, give each possible option its own column.
+- Keep respondent identification separate from the meaning of the response codes.
+
+### Open-ended questions
+
+Open-ended answers need categories before they can be summarized numerically.
+
+- Categories should not overlap and should cover the possible responses.
+- The slides suggest keeping the “other” category to 10% or less of responses.
+- Important issues can have their own category even when no respondent mentions them.
+- Preserve as much detail as possible when coding.
+
+### Codebook
+
+A codebook explains what each variable means and how to enter or interpret its values. It generally includes the column, record, variable number, variable name, question number, and coding instructions.
+
+In the restaurant example, preference uses a 1–7 scale from weak to strong preference. Quality, quantity, value, and service also use 1–7 scales, but their endpoints are poor and excellent. The numbers alone are not enough; the labels explain what they mean.
+
+## Data Transcription and Cleaning
+
+Transcription transfers the coded responses into a computer-readable dataset. The lecture includes manual entry, scanning, and direct collection through computer-assisted interviews or internet surveys. Entry errors still need to be checked.
+
+Consistency checks look for:
+
+- **Out-of-range values:** values outside the allowed response codes.
+- **Logical inconsistencies:** answers that conflict with other answers.
+- **Extreme values:** unusually high or low observations that need review.
+
+An extreme value should be checked before deciding whether it is an error or a valid response.
+
+## Missing Responses
+
+The slides describe four ways to handle missing answers:
+
+| Method | What happens |
+|---|---|
+| Neutral-value substitution | Replace the missing response with a neutral value, such as the variable’s mean. |
+| Imputation | Estimate a response using the respondent’s answers to other questions. |
+| Casewise deletion | Exclude a respondent from the analysis if a required response is missing. |
+| Pairwise deletion | Use respondents with complete answers for each specific calculation. |
+
+The key difference between casewise and pairwise deletion is how much of a respondent’s information is excluded. With pairwise deletion, the number of usable respondents can change from one calculation to another.
+
+## Statistical Adjustments
+
+### Weighting
+
+Weighting gives some respondents more influence than others. It can make the sample better match the target population on selected characteristics or place more importance on certain respondent groups.
+
+### Variable respecification
+
+Respecification creates new variables or changes existing ones. This can include combining several measures into a composite variable or turning categories into dummy variables.
+
+For a categorical variable with **K categories**, the lecture shows **K − 1 dummy variables**. The remaining category becomes the reference group.
+
+In the product-usage example, there are four groups: nonusers, light users, medium users, and heavy users. Three dummy variables identify the first three groups. Heavy users have zeros on all three and serve as the reference category.
+
+### Scale transformation and standardization
+
+Scale transformation changes scale values to make measures comparable or suitable for analysis.
+
+A standardized score is:
+
+$$
+z_i = \frac{x_i - \bar{x}}{s_x}
+$$
+
+This subtracts the mean from an observation and divides by the standard deviation. The result tells how many standard deviations the observation is above or below the mean.
+
+## Selecting an Analysis Strategy
+
+The analysis strategy depends on the research problem, the characteristics of the data, the properties of the statistical methods, and the researcher’s background and judgment.
+
+Before choosing a method, identify:
+
+- What question the analysis needs to answer.
+- Whether the data are metric or categorical.
+- How many samples or groups are being compared.
+- Whether the groups are independent or paired.
+- Whether there is a defined dependent variable.
+
+### Tests for differences
+
+The lecture separates parametric tests for metric data from nonparametric tests for nonmetric data. It also distinguishes one-sample tests from tests involving two or more samples.
+
+| Comparison or variable setup | Methods shown in the lecture |
+|---|---|
+| Two independent groups with a metric outcome | Two-group t test |
+| Paired observations with a metric outcome | Paired t test |
+| A metric outcome with categorical factors | Analysis of variance (ANOVA) |
+| A metric outcome with categorical predictors and interval covariates | Analysis of covariance (ANCOVA) |
+| A metric outcome with interval predictors | Regression |
+| Nonmetric comparisons | Chi-square, Mann–Whitney, median, Kolmogorov–Smirnov, sign, Wilcoxon, or McNemar tests, depending on the design |
+
+These are categories for choosing a method; the specific test still has to fit the research design and its assumptions.
+
+### Multivariate techniques
+
+Multivariate analysis considers several variables together.
+
+- **Dependence techniques** specify one or more dependent variables. The slides include regression, ANOVA/ANCOVA, conjoint analysis, multivariate ANOVA/covariance, canonical correlation, and multiple discriminant analysis.
+- **Interdependence techniques** examine patterns without assigning a dependent variable. Factor analysis looks at relationships among variables. Cluster analysis and multidimensional scaling examine similarities among objects or cases.
+
+My main takeaway is that selecting a test comes after understanding the question and preparing the data. A complicated analysis will not fix unclear coding, inconsistent responses, or an unexplained approach to missing values.
+
+## Index
+
+- [GitHub repository](https://github.com/gmonjarrez/class-notes-2026-11-05)
+- [Published HTML notes](https://gmonjarrez.github.io/class-notes-2026-11-05/)
+- [Editable Quarto file](https://github.com/gmonjarrez/class-notes-2026-11-05/blob/main/class-notes-2026-11-05.qmd)
