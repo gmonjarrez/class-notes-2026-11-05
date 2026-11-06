@@ -15,6 +15,7 @@ format:
     include-in-header:
       text: |
         <style>
+        #title-block-header { display: none; }
         body { color: #29313a; line-height: 1.65; }
         h1,h2,h3 { color: #242b32; }
         .notes-meta { color: #65717b; margin-top: 1.5rem; }
@@ -27,7 +28,7 @@ format:
 Georgia Monjarrez · November 5, 2026
 :::
 
-# Class Notes {.unnumbered .unlisted}
+<h1>Class Notes</h1>
 
 ## Data Preparation and Analysis Strategy
 
